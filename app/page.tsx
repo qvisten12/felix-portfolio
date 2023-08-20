@@ -7,10 +7,8 @@ export default function Home() {
   };
 
   return (
-    <PageTransition>
-      <section className="font-PP">
-        <Landing />
-      </section>
-    </PageTransition>
+    <section className="font-PP">
+      <Landing />
+    </section>
   );
 }
