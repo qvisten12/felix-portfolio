@@ -12,4 +12,5 @@ html {
 @font-face {
   font-family: "PP";
   src: url("../public/fonts/PPNeueMontreal-Regular.woff2");
+  font-display: swap;
 }
