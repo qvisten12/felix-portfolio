@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import "./globals.css";
 import "./landing.css";
 import type { Metadata } from "next";
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header />
         <main className="container mx-auto max-w-screen-2xl py-5 px-5 flex justify-center flex-col h-screen">
           {children}
         </main>
