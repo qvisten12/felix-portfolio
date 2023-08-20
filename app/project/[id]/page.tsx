@@ -1,3 +1,4 @@
+import PageTransition from "@/components/PageTransition";
 import { Metadata } from "next";
 
 type Props = {
@@ -13,7 +14,11 @@ export const generateMetadata = ({ params }: Props): Metadata => {
 // https://www.builder.io/blog/routing-seo-metadata-nextjs-13
 
 const page = ({ params }: { params: { id: string } }) => {
-  return <div>Project: {params.id}</div>;
+  return (
+    <PageTransition>
+      <div>Project: {params.id}</div>
+    </PageTransition>
+  );
 };
 
 export default page;

@@ -1,6 +1,7 @@
 import AnimatedMe from "@/components/AnimatedMe";
 import "../animatedme.css";
 import { Metadata } from "next";
+import PageTransition from "@/components/PageTransition";
 
 export const metadata: Metadata = {
   title: "Felix Ljungqvist - About",
@@ -9,9 +10,11 @@ export const metadata: Metadata = {
 
 const about = () => {
   return (
-    <section>
-      <AnimatedMe />
-    </section>
+    <PageTransition>
+      <section>
+        <AnimatedMe />
+      </section>
+    </PageTransition>
   );
 };
 

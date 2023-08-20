@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import "./globals.css";
 import "./landing.css";
 import type { Metadata } from "next";
+import { AnimatePresence } from "framer-motion";
 
 export const metadata: Metadata = {
   title: "Felix Ljungqvist",
