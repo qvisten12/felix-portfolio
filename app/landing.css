@@ -1,7 +1,8 @@
 #wrapper {
-  aspect-ratio: 1.618;
+  /* aspect-ratio: 1.618; */
   width: 90vmin;
   position: relative;
+  height: 35rem;
 }
 
 #wrapper > .shape {
@@ -281,6 +282,7 @@
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     aspect-ratio: 1.018;
+    height: unset;
   }
 
   .landing-title {
