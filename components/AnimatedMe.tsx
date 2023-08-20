@@ -10,7 +10,6 @@ const AnimatedMe = () => {
     const element = document.getElementById(id);
     if (element) {
       const text = element.innerText.split("");
-      console.log(text);
       element.innerText = "";
 
       text.forEach((value, index) => {
