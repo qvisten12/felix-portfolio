@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="container mx-auto max-w-screen-2xl py-5 px-5 flex justify-center flex-col h-screen">
+        <main className="container mx-auto max-w-screen-2xl px-5 flex justify-center flex-col h-screen">
           {children}
         </main>
       </body>

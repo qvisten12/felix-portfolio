@@ -27,8 +27,11 @@ const AnimatedMe = () => {
 
         letter.className = "letter";
 
-        if (value.length) letter.innerText = value;
-        else letter.innerText = " ";
+        if (value !== " ") letter.innerText = value;
+        else {
+          console.log("1");
+          letter.innerText = "\u00A0";
+        }
 
         letter.style.animationDelay = `${index * 1000}ms`;
 
@@ -46,7 +49,7 @@ const AnimatedMe = () => {
   }, []);
 
   return (
-    <div className="grid place-items-center">
+    <div className="grid place-items-center mb-40">
       <div id="text">
         <div className="line">
           <p className="word">A</p>
@@ -70,7 +73,7 @@ const AnimatedMe = () => {
             target="_blank"
             className="word fancy"
           >
-            Felix Ljungqvist
+            Send Me An Email
           </a>
         </div>
       </div>

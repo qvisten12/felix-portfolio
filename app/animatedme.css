@@ -90,11 +90,6 @@
   transform: translate(0%, 20%) rotate(-3deg);
 }
 
-.fancy > .outer:nth-child(6) {
-  /* transform: translate(0%, 20%) rotate(-3deg); */
-  margin: 0 18px;
-}
-
 .fancy:hover > .outer:nth-child(7) {
   transform: translate(0%, -40%) rotate(-5deg);
 }
