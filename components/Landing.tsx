@@ -37,7 +37,7 @@ const Landing = () => {
     setCombination(combinations[index]);
 
     prev = index;
-  }, 2500);
+  }, 3000);
 
   return (
     <div className="grid place-items-center">
