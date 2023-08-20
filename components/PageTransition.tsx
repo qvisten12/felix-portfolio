@@ -1,5 +1,5 @@
 "use client";
-import React, { forwardRef, useMemo } from "react";
+import React, { forwardRef } from "react";
 import { motion, HTMLMotionProps } from "framer-motion";
 
 type PageTransitionProps = HTMLMotionProps<"div">;
