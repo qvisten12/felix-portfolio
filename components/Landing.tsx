@@ -17,10 +17,10 @@ const rand = (min: number, max: number) =>
 
 const Landing = () => {
   const wrapperRef = useRef(null);
-
   const [combination, setCombination] = useState(
     combinations[rand(0, combinations.length - 1)]
   );
+  const [prevIndex, setPrevIndex] = useState(0);
 
   const uniqueRand = (min: number, max: number, prev: number) => {
     let next = prev;
@@ -30,13 +30,11 @@ const Landing = () => {
     return next;
   };
 
-  let prev = 0;
-
   setInterval(() => {
-    const index = uniqueRand(0, combinations.length - 1, prev);
+    const index = uniqueRand(0, combinations.length - 1, prevIndex);
     setCombination(combinations[index]);
 
-    prev = index;
+    setPrevIndex(index);
   }, 3000);
 
   return (
