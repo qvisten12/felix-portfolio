@@ -260,13 +260,17 @@
 }
 
 .landing-title {
-  width: 90vmin;
-  text-align: end;
   margin-top: 0.5rem;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2rem;
   font-weight: 600;
+}
+
+.landing-title-wrapper {
+  width: 90vmin;
+  display: flex;
+  justify-content: end;
 }
 
 @media (max-width: 600px) {
@@ -280,5 +284,6 @@
   }
 
   .landing-title {
+    text-decoration: none;
   }
 }

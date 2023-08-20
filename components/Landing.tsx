@@ -55,9 +55,14 @@ const Landing = () => {
         <Link className="shape" href="/project/6" aria-label="Project 6" />
         <Link className="shape" href="/project/7" aria-label="Project 7" />
       </nav>
-      <Link href="about" className="landing-title text-lg">
-        Felix Ljungqvist
-      </Link>
+      <div className="landing-title-wrapper">
+        <Link
+          href="about"
+          className="landing-title text-xl hover:text-slate-600"
+        >
+          Felix Ljungqvist
+        </Link>
+      </div>
     </div>
   );
 };
