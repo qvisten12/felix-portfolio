@@ -1,8 +1,8 @@
 #wrapper {
   /* aspect-ratio: 1.618; */
-  width: 90vmin;
+  width: 100vmin;
   position: relative;
-  height: 35rem;
+  height: 38rem;
 }
 
 #wrapper > .shape {
@@ -287,5 +287,11 @@
 
   .landing-title {
     text-decoration: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  #wrapper {
+    width: 90vmin;
   }
 }
