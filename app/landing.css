@@ -270,6 +270,7 @@
 
 .landing-title-wrapper {
   width: 90vmin;
+  width: 100vmin;
   display: flex;
   justify-content: end;
 }
@@ -292,6 +293,9 @@
 
 @media (max-width: 1100px) {
   #wrapper {
+    width: 90vmin;
+  }
+  .landing-title-wrapper {
     width: 90vmin;
   }
 }
