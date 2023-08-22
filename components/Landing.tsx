@@ -53,17 +53,20 @@ const Landing = () => {
         clearInterval(interval);
 
         interval = setInterval(() => {
+          // @ts-ignore
           event!.target!.innerText = event!
+            // @ts-ignore
             .target!.innerText.split("")
             .map((letter: any, index: any) => {
               if (index < iteration) {
+                // @ts-ignore
                 return event?.target?.dataset?.value[index];
               }
 
               return letters[Math.floor(Math.random() * 26)];
             })
             .join("");
-
+          // @ts-ignore
           if (iteration >= event?.target?.dataset?.value?.length) {
             clearInterval(interval);
           }
