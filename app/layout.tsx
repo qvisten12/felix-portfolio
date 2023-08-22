@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import "./landing.css";
+import "./animatedblob.css";
 import type { Metadata } from "next";
-import { AnimatePresence } from "framer-motion";
+import AnimatedBlob from "@/components/AnimatedBlob";
 
 export const metadata: Metadata = {
   title: "Felix Ljungqvist",
@@ -18,7 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="container mx-auto max-w-screen-2xl px-5 flex justify-center flex-col h-screen">
+        <AnimatedBlob />
+        <main className="container mx-auto max-w-screen-2xl px-5 flex justify-center flex-col h-screen z-10 relative">
           {children}
         </main>
       </body>

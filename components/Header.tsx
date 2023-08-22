@@ -15,14 +15,14 @@ const Header = () => {
   const changedPathName = removeSlashesAndNumbers(pathname);
 
   return pathname === "/" ? null : (
-    <PageTransition>
-      <header className="flex justify-between mx-auto max-w-screen-2xl lg:pt-20 pt-6 px-10">
+    <header className=" mx-auto max-w-screen-2xl  w-full relative">
+      <div className="absolute z-50 flex justify-between lg:pt-20 pt-6 px-10 w-full">
         <h1 className="text-3xl">{changedPathName}</h1>
         <Link href="/" className="text-3xl">
           &#10005;
         </Link>
-      </header>
-    </PageTransition>
+      </div>
+    </header>
   );
 };
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const combinations = [
   { configuration: 1, roundness: 1 },
@@ -17,6 +17,8 @@ const rand = (min: number, max: number) =>
 
 const Landing = () => {
   const wrapperRef = useRef(null);
+  const linkRef = useRef<HTMLAnchorElement | null>(null);
+
   const [combination, setCombination] = useState(
     combinations[rand(0, combinations.length - 1)]
   );
@@ -37,6 +39,41 @@ const Landing = () => {
     setPrevIndex(index);
   }, 3000);
 
+  /* -- Text effect -- */
+
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  useEffect(() => {
+    if (linkRef.current) {
+      let interval: any = null;
+
+      linkRef.current.onmouseover = (event) => {
+        let iteration = 0;
+
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+          event!.target!.innerText = event!
+            .target!.innerText.split("")
+            .map((letter: any, index: any) => {
+              if (index < iteration) {
+                return event?.target?.dataset?.value[index];
+              }
+
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+          if (iteration >= event?.target?.dataset?.value?.length) {
+            clearInterval(interval);
+          }
+
+          iteration += 1 / 3;
+        }, 30);
+      };
+    }
+  });
+
   return (
     <div className="grid place-items-center">
       <nav
@@ -55,8 +92,10 @@ const Landing = () => {
       </nav>
       <div className="landing-title-wrapper">
         <Link
+          ref={linkRef}
           href="about"
           className="landing-title text-xl hover:text-slate-600"
+          data-value="Felix Ljungqvist"
         >
           Felix Ljungqvist
         </Link>
