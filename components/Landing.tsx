@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { isTouchDevice } from "@/utils/WebAgent";
 
 const combinations = [
   { configuration: 1, roundness: 1 },
@@ -41,6 +40,17 @@ const Landing = () => {
   }, 3000);
 
   /* -- Text effect -- */
+
+  const isTouchDevice = () => {
+    if (window && navigator) {
+      return (
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        // @ts-ignore
+        navigator.msMaxTouchPoints > 0
+      );
+    }
+  };
 
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
