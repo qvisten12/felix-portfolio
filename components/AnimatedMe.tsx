@@ -46,10 +46,10 @@ const AnimatedMe = () => {
 
   useEffect(() => {
     enhance("channel-link");
-  }, []);
+  });
 
   return (
-    <div className="grid place-items-center mb-40">
+    <div className="grid place-items-center sm:mb-20 lg:mb-0 ">
       <div id="text">
         <div className="line">
           <p className="word">A</p>

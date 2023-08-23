@@ -1,26 +1,11 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { isTouchDevice, isSafari } from "@/utils/WebAgent";
 
 const AnimatedBlob = () => {
-  const [isSafari, setIsSafari] = useState(false);
-  /* -- Glow effect -- */
-
   const blobRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const isTouchDevice = () => {
-      if (window) {
-        return (
-          "ontouchstart" in window ||
-          navigator.maxTouchPoints > 0 ||
-          // @ts-ignore
-          navigator.msMaxTouchPoints > 0
-        );
-      }
-    };
-
-    setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
-
     if (!isTouchDevice() && !isSafari) {
       window.onpointermove = (event) => {
         const { clientX, clientY } = event;
@@ -34,7 +19,7 @@ const AnimatedBlob = () => {
         );
       };
     }
-  }, []);
+  });
 
   return (
     <>

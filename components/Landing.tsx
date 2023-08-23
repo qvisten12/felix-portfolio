@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { isTouchDevice } from "@/utils/WebAgent";
 
 const combinations = [
   { configuration: 1, roundness: 1 },
@@ -44,7 +45,7 @@ const Landing = () => {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   useEffect(() => {
-    if (linkRef.current) {
+    if (linkRef.current && !isTouchDevice()) {
       let interval: any = null;
 
       linkRef.current.onmouseover = (event) => {
@@ -71,7 +72,7 @@ const Landing = () => {
             clearInterval(interval);
           }
 
-          iteration += 1 / 3;
+          iteration += 1 / 2;
         }, 30);
       };
     }
@@ -97,7 +98,7 @@ const Landing = () => {
         <Link
           ref={linkRef}
           href="about"
-          className="landing-title text-xl hover:text-slate-600"
+          className="landing-title text-xl hover:text-slate-600 uppercase font-bold"
           data-value="Felix Ljungqvist"
         >
           Felix Ljungqvist
