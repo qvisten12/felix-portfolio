@@ -2,6 +2,7 @@ import "./globals.css";
 import "./animatedblob.css";
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Felix Ljungqvist",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <main className="container mx-auto max-w-screen-2xl px-5 flex justify-center flex-col h-screen z-10 relative">
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );
