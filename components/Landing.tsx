@@ -96,19 +96,47 @@ const Landing = () => {
         data-configuration={combination.configuration}
         data-roundness={combination.roundness}
       >
-        <Link className="shape" href="/project/1" aria-label="Project 1" />
-        <Link className="shape" href="/project/2" aria-label="Project 2" />
-        <Link className="shape" href="/project/3" aria-label="Project 3" />
-        <Link className="shape" href="/project/4" aria-label="Project 4" />
-        <Link className="shape" href="/project/5" aria-label="Project 5" />
-        <Link className="shape" href="/project/6" aria-label="Project 6" />
-        <Link className="shape" href="/project/7" aria-label="Project 7" />
+        <Link
+          className="shape bg-[#9bce51] dark:bg-green-500"
+          href="/project/1"
+          aria-label="Project 1"
+        />
+        <Link
+          className="shape bg-[#ffe31b] dark:bg-yellow-300"
+          href="/project/2"
+          aria-label="Project 2"
+        />
+        <Link
+          className="bg-black dark:bg-white shape"
+          href="/project/3"
+          aria-label="Project 3"
+        />
+        <Link
+          className="shape bg-[#65bc4d] dark:bg-emerald-400"
+          href="/project/4"
+          aria-label="Project 4"
+        />
+        <Link
+          className="shape bg-[#cdcccc] dark:bg-gray-500"
+          href="/project/5"
+          aria-label="Project 5"
+        />
+        <Link
+          className="shape bg-[#2157a4] dark:bg-blue-600"
+          href="/project/6"
+          aria-label="Project 6"
+        />
+        <Link
+          className="shape bg-[#85cef1] dark:bg-blue-300"
+          href="/project/7"
+          aria-label="Project 7"
+        />
       </nav>
       <div className="landing-title-wrapper">
         <Link
           ref={linkRef}
           href="about"
-          className="landing-title text-xl hover:text-slate-600 uppercase font-bold"
+          className="landing-title text-xl hover:text-slate-600 uppercase font-bold dark:text-white"
           data-value="Felix Ljungqvist"
         >
           Felix Ljungqvist

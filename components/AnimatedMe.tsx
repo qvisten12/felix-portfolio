@@ -49,20 +49,20 @@ const AnimatedMe = () => {
   });
 
   return (
-    <div className="grid place-items-center sm:mb-20 lg:mb-0 ">
+    <div className="grid place-items-center sm:mb-20 lg:mb-0">
       <div id="text">
         <div className="line">
-          <p className="word">A</p>
-          <p className="word">Person</p>
+          <p className="word dark:text-white">A</p>
+          <p className="word dark:text-white">Person</p>
         </div>
 
         <div className="line">
-          <p className="word">Developer</p>
-          <p className="word">&</p>
+          <p className="word dark:text-white">Developer</p>
+          <p className="word dark:text-white">&</p>
         </div>
 
         <div className="line">
-          <p className="word">Tech Enthusiast</p>
+          <p className="word dark:text-white">Tech Enthusiast</p>
         </div>
 
         <div className="line">
@@ -71,7 +71,7 @@ const AnimatedMe = () => {
             href="mailto:felixljungqvist@icloud.com"
             aria-label="email me"
             target="_blank"
-            className="word fancy"
+            className="word fancy dark:text-white"
           >
             Send Me An Email
           </a>
