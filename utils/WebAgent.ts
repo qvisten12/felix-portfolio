@@ -3,7 +3,7 @@ export const isSafari = /^((?!chrome|android).)*safari/i.test(
 );
 
 export const isTouchDevice = () => {
-  if (window) {
+  if (window && navigator) {
     return (
       "ontouchstart" in window ||
       navigator.maxTouchPoints > 0 ||
