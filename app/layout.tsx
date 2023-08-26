@@ -3,8 +3,6 @@ import "./animatedblob.css";
 import dynamic from "next/dynamic";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
-import { useState } from "react";
 
 export const metadata: Metadata = {
   title: "Felix Ljungqvist",
@@ -25,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className="dark:bg-black ">
         <Header />
         <AnimatedBlob />

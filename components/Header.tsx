@@ -1,12 +1,11 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import PageTransition from "./PageTransition";
 import { useEffect, useState } from "react";
 
 const Header = () => {
   const pathname = usePathname();
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   function removeSlashesAndNumbers(inputString: string) {
     const changedString = inputString.replace(/[\/0-9]/g, "");
@@ -27,10 +26,29 @@ const Header = () => {
     }
   };
 
+  const userIsTabbing = (event: Event) => {
+    if (event.keyCode == 9) {
+      console.log("tabbing");
+      var root = document.body;
+      root.classList.add("tabbing");
+    } else {
+      var root = document.body;
+      root.classList.remove("tabbing");
+    }
+  };
+
   useEffect(() => {
     document.documentElement.classList.contains("dark")
       ? setTheme("dark")
       : setTheme("light");
+
+    document.body.addEventListener("keydown", userIsTabbing);
+    document.body.addEventListener("mousedown", userIsTabbing);
+
+    return () => {
+      document.body.removeEventListener("keydown", userIsTabbing);
+      document.body.removeEventListener("mousedown", userIsTabbing);
+    };
   }, []);
 
   return pathname === "/" ? (

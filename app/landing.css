@@ -28,36 +28,64 @@
 #wrapper > .shape:nth-child(1) {
   z-index: 2;
   animation: 200ms ease-out 0s 1 scaleIn;
+
+  & :focus {
+    z-index: 999;
+  }
 }
 
 #wrapper > .shape:nth-child(2) {
   z-index: 2;
   animation: 1000ms ease-in-out 0s 1 scaleIn;
+
+  & :focus {
+    z-index: 999;
+  }
 }
 
 #wrapper > .shape:nth-child(3) {
   z-index: 1;
   animation: 500ms ease-in-out 0s 1 scaleIn;
+
+  & :focus {
+    z-index: 999;
+  }
 }
 
 #wrapper > .shape:nth-child(4) {
   z-index: 2;
   animation: 800ms ease-in-out 0s 1 scaleIn;
+
+  & :focus {
+    z-index: 999;
+  }
 }
 
 #wrapper > .shape:nth-child(5) {
   z-index: 2;
   animation: 400ms ease-in-out 0s 1 scaleIn;
+
+  & :focus {
+    z-index: 999;
+  }
 }
 
 #wrapper > .shape:nth-child(6) {
   z-index: 2;
   animation: 800ms ease-in-out 0s 1 scaleIn;
+
+  & :focus {
+    z-index: 999;
+  }
 }
 
 #wrapper > .shape:nth-child(7) {
   z-index: 2;
   animation: 900ms ease-in-out 0s 1 scaleIn;
+
+  & :focus {
+    z-index: 999;
+  }
 }
 
 #wrapper[data-configuration="1"] > .shape:nth-child(1) {
@@ -250,6 +278,10 @@
 
 #wrapper > .shape:hover {
   background-color: gray;
+}
+
+.tabbing #wrapper > .shape:focus {
+  z-index: 999;
 }
 
 .landing-title {

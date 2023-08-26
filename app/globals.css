@@ -14,3 +14,15 @@ html {
   src: url("../public/fonts/PPNeueMontreal-Regular.woff2");
   font-display: swap;
 }
+
+.dark .tabbing *:focus {
+  outline: 3px solid lightgray;
+  outline-offset: 8px;
+  z-index: 999;
+}
+
+.tabbing *:focus {
+  outline: 3px solid black;
+  outline-offset: 8px;
+  z-index: 999;
+}
