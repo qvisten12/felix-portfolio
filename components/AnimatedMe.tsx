@@ -45,7 +45,7 @@ const AnimatedMe = () => {
   };
 
   useEffect(() => {
-    enhance("channel-link");
+    enhance("email-link");
   });
 
   return (
@@ -67,7 +67,7 @@ const AnimatedMe = () => {
 
         <div className="line">
           <a
-            id="channel-link"
+            id="email-link"
             href="mailto:felixljungqvist@icloud.com"
             aria-label="email me"
             target="_blank"

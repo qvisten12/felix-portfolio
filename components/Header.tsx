@@ -26,9 +26,8 @@ const Header = () => {
     }
   };
 
-  const userIsTabbing = (event: Event) => {
+  const userIsTabbing = (event: any) => {
     if (event.keyCode == 9) {
-      console.log("tabbing");
       var root = document.body;
       root.classList.add("tabbing");
     } else {
