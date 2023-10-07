@@ -27,7 +27,7 @@ const AnimatedBlob = () => {
             left: `${clientX}px`,
             top: `${clientY}px`,
           },
-          { duration: 3000, fill: "forwards" }
+          { duration: 500, fill: "forwards" }
         );
       };
     }
